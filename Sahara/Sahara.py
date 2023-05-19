@@ -60,6 +60,7 @@ if 3464/interpolated_values[2] > 902.58:
     print("\n**** The range of Rp should be","[",round(0.3363/interpolated_values[2],3),",","902.58","] ****")
 else:
     print("\n**** The range of Rp should be","[",round(0.3363/interpolated_values[2],3),",",round(3464/interpolated_values[2],3),"] ****")
+
 r = float(input("Enter values of Rp: "))
 Prandtl_number2 = r * interpolated_values[2]
 
@@ -96,9 +97,11 @@ H3, Prandtl_number3 = 1363.948, 303.54
 
 #! Not Finish and Not Complete on the way to find the range
 if pr_interpolated_values[1] - interpolated_values[1] < 0:
-    print("Compressor Efficiency should more than: ",((H3-interpolated_values[1])/(pr_interpolated_values[1]-interpolated_values[1]))*100,"%")
+    print("Interpolated H values must be more than 1368.948")
+    #print("Compressor Efficiency should more than: ",((H3-interpolated_values[1])/(pr_interpolated_values[1]-interpolated_values[1]))*100,"%")
 elif pr_interpolated_values[1] - interpolated_values[1] > 0:
-    print("Compressor Efficiency should less than: ",((H3-interpolated_values[1])/(pr_interpolated_values[1]-interpolated_values[1]))*100,"%")
+    print("Interpolated H values must be less than 1368.948")
+    #print("Compressor Efficiency should less than: ",((H3-interpolated_values[1])/(pr_interpolated_values[1]-interpolated_values[1]))*100,"%")
 
 compressor_efficiency  = float(input("Enter compressor efficiency(%):"))/100
 H2A = interpolated_values[1] + ((pr_interpolated_values[1] - interpolated_values[1])/ compressor_efficiency) 
